@@ -1,0 +1,134 @@
+.movie-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.movie-banner::after {
+  --width-calc: calc(100 - ((100vw - 100%) / 2));
+  z-index: -1;
+  content: '';
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: var(--width-calc);
+  background-size: cover;
+  background-position: center;
+  background-image: var(--movie-backdrop);
+}
+
+.banner-overlay {
+  --width-calc: calc(100 - ((100vw - 100%) / 2));
+  position: absolute;
+  top: 0;
+  left: var(--width-calc);
+  width: 100vw;
+  height: 100%;
+  background-color: #00000090;
+}
+
+.banner-content {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 2rem 0;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.poster {
+  view-transition-name: poster;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+.info {
+  max-width: 600px;
+}
+
+.info .rating {
+  view-transition-name: rating;
+}
+
+.info .rating-value {
+  color: white;
+}
+
+.info-bullets {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.2rem;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+
+.vl {
+  border-left: 1px solid gray;
+  height: 15px;
+  margin: 0 0.3rem;
+}
+
+.movie_title {
+  view-transition-name: title;
+  font-size: 32px;
+  margin: 0 0 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.info h2 {
+  font-size: 18px;
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.info h3 {
+  margin-bottom: 0.2rem;
+}
+
+.info h4 {
+  margin-bottom: 0rem;
+}
+
+.budget {
+  display: flex;
+  flex-flow: row;
+  gap: 3rem;
+}
+
+.production-companies {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.production-companies h2 {
+  font-size: 24px;
+  margin-top: 1.75rem;
+}
+
+.production-companies p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.production-company {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+
+.company-logo {
+  height: 50px;
+  width: fit-content;
+  max-width: 250px;
+}

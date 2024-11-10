@@ -1,0 +1,34 @@
+.page-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.page-selector button {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  color: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.page-selector button:disabled {
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+}
+
+.page-selector button:hover:not(:disabled) {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-1px);
+}
+
+.page-selector span {
+  font-size: 1rem;
+}
